@@ -9,27 +9,39 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        .centered {
+        width:50%;
+        height: 10%;
+        border: 1px solid black; /* adds a border */
+        margin: 80px auto; /* centers the div horizontally */
     
-         
+        }
+        .contained{
+            justify-content: center;
+        }
         
-      
-    
-    <form style ="border-top-0 !important"class="d-flex flex-column min-vh-100 justify-content-center align-items-center  border  border-primary rounded p-3"action="add" method="post">
+    </style>
+    <form class=" centered d-flex flex-column justify-content-center align-items-center  border  border-primary rounded p-3"action="add" method="post">
         @csrf
-        <div class="form-group">
-        <label for="name">book name :</label>       
-        <input type="text" class="form-control"name="book_name"><br>
+        <div class="contained">
+            <h2><u>Enter book details</u></h2>
+            <div class="form-group">
+                <label for="name">book name </label>       
+                <input type="text" class="form-control"name="book_name"><br>
+                </div>
+                <div class="form-group">
+                <label for="isbn">Isbn </label>
+                <input type="text" class="form-control"name="isbn"><br>
+                </div>
+                <div class="form-group">
+                    <label for="author_name">author_name:</label>
+                    <input type="text" class="form-control"name="author_name"><br>
+                </div>
+        
+                <button class="btn btn-primary" name="submit">Submit</button>
         </div>
-        <div class="form-group">
-        <label for="isbn">Isbn :</label>
-        <input type="text" class="form-control"name="isbn"><br>
-        </div>
-        <div class="form-group">
-            <label for="author_name">author_name:</label>
-            <input type="text" class="form-control"name="author_name"><br>
-        </div>
-
-        <button class="btn btn-primary" name="submit">Submit</button>
+        
     </form>
     
 </body>

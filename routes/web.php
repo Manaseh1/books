@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\showController;
 
 /*
-|--------------------------------------------------------------------------
+|---------------------------------`-----------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
 |
@@ -14,8 +14,11 @@ use App\Http\Controllers\showController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/bkdis', function () {
+    return view('bkdis');
+});
+Route::get('/authdis',function(){
+    return view('authdis');
 });
 Route::post('add',[showController::class,'add']);
 Route::get('book',[showController::class,'enterbook']);

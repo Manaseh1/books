@@ -39,37 +39,10 @@ class showController extends Controller
 
     }
     function showbook(){
-        $data = DB::select('select * from books');
-        echo '<table border="1px">';
-        echo '<tr>
-            <td>Book_name</td>
-            <td>Isbn</td>
-            <td>Author_name</td>
-        </tr>';
-        foreach($data as $data ){
-            echo '<tr><td>'.$data->name.'</td>';
-            echo '<td>'.$data->isbn.'</td>';
-            echo '<td>'.$data->author_name.'</td>';        
-
-        }
-        echo '</table>';
+        return view('bkdis');
     }
     function showauthor(){
-        $data = DB::select('select * from authors');
-        echo '<table border="1px">';
-        echo '<tr>
-            <td>Author_name</td>
-            <td>Author_id</td>
-
-        </tr>';
-        foreach($data as $data ){
-            echo '<tr>';
-            echo '<td>'.$data->id.'</td>';        
-            echo '<td>'.$data->author_name.'</td></tr>';        
-
-        }
-        echo '</table>';
-    
+        return view('authdis');    
     }
 
 }
