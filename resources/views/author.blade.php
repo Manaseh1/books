@@ -24,7 +24,7 @@
 
 
 <body>
-<form class=" contained centered d-flex flex-column justify-content-center align-items-center  border  border-primary rounded p-3"action="add" method="post">
+<form class=" contained centered d-flex flex-column justify-content-center align-items-center  border  border-primary rounded p-3"action="add2" method="post">
         <h2><u>Enter book details</u></h2>
         @csrf
         <div class="form-group">
